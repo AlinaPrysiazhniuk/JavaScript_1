@@ -170,6 +170,53 @@
 // повертати новий рядок , де кожне слово буде з великої букви
 // capitalize('the quick brown fox')// 'The Quick Brown Fox '
 
+//cтворити функцію capitalize з параметром str
+//розбити рядок на масив елементів split
+//запустити цикл і на кожній ітерації першому символу слова задавати UpperCase
+//тоді кожне слово, де змінили букву пушити в новий масив
+//за допомогою join масив перетворити на рядок
+//вивести рядок у консоль
+
+// const capitalize = (str) => {
+//   let arrayStr = str.split(" ");
+//   //return arrayStr;
+//   for (let i = 0; i < arrayStr.length; i++) {
+//     let word = arrayStr[i];
+//     console.log(word);
+//     let newArrayUpper = [];
+//     //першу букву слова потрібно зробити
+//     for (let a = 0; a < word.length; a++) {
+//       let wordUpper = word[0].toUpperCase();
+
+//       console.log(newArrayUpper);
+//       break;
+//     }
+//     //заміна першої букви в слові і пушимо  слово в масив
+//     let newWord = word.splice(0, 1, wordUpper);
+//     console.log(newWord);
+//     // word = word.toUpperCase();
+//     // console.log(word);
+//   }
+//   return arrayStr;
+// };
+
+// console.log(capitalize("hello world"));
+
+// function string() {
+//   let string = "code qwe";
+//   let splits = string.split(" "); //розбили рядок на масив
+//   let stringItog = ""; //результуючий рядок який ми будемо формувати
+
+//   for (let i = 0; i < splits.length; i++) {
+//     let Name = splits[i];
+//     let First = Name.substring(0, 1).toUpperCase();
+//     let Leftovers = Name.substring(1, Name.length);
+//     stringItog += First + Leftovers + " ";
+//   }
+
+//   return stringItog;
+// }
+// console.log(string());
 // ЗАДАЧА 9
 // Напишіть функцію для роботи з колекцією навчаючих курсів courses:
 
@@ -195,17 +242,69 @@
 //4 выводит содержимое объекта users в фортмате
 //ключ:значение используя Object.keys() и for...of
 
+// const user = {};
+
 //11. У нас есть объект, в котором храняться зарплаты
 //нашей команды
 //Напишите код для сумирования всех зарплат и
 //сохраните его результат в переменной sum.
 //Если объект salaries пуст, то результат должен быть 0
 
+// const salaryComand = {
+//   salary: [1000, 2000, 3300, 5000],
+// };
+
+// let totalSum = 0;
+// for (const sal of salaryComand.salary) {
+//   totalSum += sal;
+// }
+
+// console.log(totalSum);
+
+// const salary = {
+//   salary1: 1000,
+//   salary2: 2000,
+//   salary3: 5400,
+// };
+
+// const values = Object.values(salary);
+
+// let totalSalary = 0;
+
+// for (const value of values) {
+//   totalSalary += value;
+// }
+
+// console.log(totalSalary);
+
 //12. Напишите ф-цию calcTotalPrice(stones, stonesName),
 //которая принимает массив объектов и
 //строку с названием камня.
 //Функция считает м возвращает общую стоимость камней
 //с таким именем, ценой и количеством из объекта
+
+// const stones = [
+//   { name: "Amarant", price: 1000 },
+//   { name: "Topaz", price: 2000 },
+//   { name: "Topaz", price: 2000 },
+// ];
+
+// function calcTotalPrice(stones, stonesName) {
+//   let totalPrice = 0;
+//   let totalSum = 0;
+
+//   for (const stone of stones) {
+//     if (stone.name === stonesName) {
+//       totalSum += 1;
+//       totalPrice += stone.price;
+//     }
+//   }
+//   //console.log(totalAmount);
+//   console.log(totalSum);
+//   console.log(totalPrice);
+// }
+
+// calcTotalPrice(stones, "Topaz");
 
 //13. Создайте объект calculator с тремя методами
 //read(a, b) - принимает два аргумента и сохраняет их
