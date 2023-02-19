@@ -177,31 +177,6 @@
 //за допомогою join масив перетворити на рядок
 //вивести рядок у консоль
 
-// const capitalize = (str) => {
-//   let arrayStr = str.split(" ");
-//   //return arrayStr;
-//   for (let i = 0; i < arrayStr.length; i++) {
-//     let word = arrayStr[i];
-//     console.log(word);
-//     let newArrayUpper = [];
-//     //першу букву слова потрібно зробити
-//     for (let a = 0; a < word.length; a++) {
-//       let wordUpper = word[0].toUpperCase();
-
-//       console.log(newArrayUpper);
-//       break;
-//     }
-//     //заміна першої букви в слові і пушимо  слово в масив
-//     let newWord = word.splice(0, 1, wordUpper);
-//     console.log(newWord);
-//     // word = word.toUpperCase();
-//     // console.log(word);
-//   }
-//   return arrayStr;
-// };
-
-// console.log(capitalize("hello world"));
-
 // function string() {
 //   let string = "code qwe";
 //   let splits = string.split(" "); //розбили рядок на масив
@@ -234,6 +209,53 @@
 
 //
 
+// // ЗАДАЧА 9
+// // Напишіть функцію для роботи з колекцією навчаючих курсів courses:
+
+// // addCourse(name) - добавляє курс у кінець колекції
+// // removeCourse(name) - видаляє курс із колекції
+// // updateCourse(oldName, newName)- змінює імя на нове
+// // const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// // addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// // addCourse("CSS"); // 'У вас уже є такий курс'
+// // removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// // removeCourse("Vue"); // 'Курс з таким іменем не найдено'
+// // updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// // console.log(courses);
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// const addCourse = (name) => {
+//   // for (const course of courses) {
+//   //     if (course === name) {
+//   //         console.log("У вас уже є такий курс");
+//   //         break;
+//   //     } else { courses.push(name); }
+//   //     return courses;
+//   // }
+//   for (let i = 0; i < courses.length; i++) {
+//     if (courses[i] === name) {
+//       console.log("У вас уже є такий курс");
+//     }
+//     courses.push(name);
+//   }
+//   return courses;
+// };
+
+// // const removeCourse = (name) => {
+// //     for (const course of courses) {
+// //         if (course === name) {
+// //             courses.slice(course, 1);
+// //         }
+// //     }
+// //      return courses;
+// // }
+
+// //console.log(addCourse("Express"));
+// console.log(addCourse("CSS"));
+// //console.log(removeCourse("React"));
+
 //10. Напиши скрипт, который для объекта user,
 //последовательно:
 //1 добавит поле mood со значением 'happy'
@@ -242,7 +264,21 @@
 //4 выводит содержимое объекта users в фортмате
 //ключ:значение используя Object.keys() и for...of
 
-// const user = {};
+// const user = {
+//   activity: "hobby",
+//   potion: "premium",
+// };
+
+// user.mood = "happy";
+// user.activity = "skydiving";
+// user.potion = "false";
+
+// const keys = Object.keys(user);
+// console.log(keys);
+
+// for (const key of keys) {
+//     console.log(`${key}: ${user[key]}`);
+// }
 
 //11. У нас есть объект, в котором храняться зарплаты
 //нашей команды
@@ -313,10 +349,19 @@
 //mult() перемножает сохраненные значения и возвращает результат
 
 // const calculator = {
-//   read(a, b) {},
-//   sum() {},
-//   mult() {},
+//   read(a, b) {
+//     return { a, b };
+//   },
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   mult() {
+//     return this.a * this.b;
+//   },
 // };
+
+// console.log(calculator.read(2, 3));
+// console.log(calculator.sum());
 
 //14. Напишите функцию updateObject, которая принимает объект и возвращает
 //новый объект без указанного параметра
@@ -451,3 +496,9 @@
 // }
 
 // console.log(sum());
+
+function changeEven(numbers, value) {
+  numbers.filter((number) => number % 2 === 0).forEach((el) => el * value);
+}
+
+console.log(changeEven([1, 2, 3, 4, 5], 10));
