@@ -264,21 +264,21 @@
 //4 выводит содержимое объекта users в фортмате
 //ключ:значение используя Object.keys() и for...of
 
-// const user = {
-//   activity: "hobby",
-//   potion: "premium",
-// };
+const user = {
+  activity: "hobby",
+  potion: "premium",
+};
 
-// user.mood = "happy";
-// user.activity = "skydiving";
-// user.potion = "false";
+user.mood = "happy";
+user.activity = "skydiving";
+user.potion = "false";
 
-// const keys = Object.keys(user);
-// console.log(keys);
+const keys = Object.keys(user);
+console.log(keys);
 
-// for (const key of keys) {
-//     console.log(`${key}: ${user[key]}`);
-// }
+for (const key of keys) {
+  console.log(`${key}: ${user[key]}`);
+}
 
 //11. У нас есть объект, в котором храняться зарплаты
 //нашей команды
