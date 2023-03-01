@@ -264,21 +264,21 @@
 //4 выводит содержимое объекта users в фортмате
 //ключ:значение используя Object.keys() и for...of
 
-const user = {
-  activity: "hobby",
-  potion: "premium",
-};
+// const user = {
+//   activity: "hobby",
+//   potion: "premium",
+// };
 
-user.mood = "happy";
-user.activity = "skydiving";
-user.potion = "false";
+// user.mood = "happy";
+// user.activity = "skydiving";
+// user.potion = "false";
 
-const keys = Object.keys(user);
-console.log(keys);
+// const keys = Object.keys(user);
+// console.log(keys);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
-}
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
 
 //11. У нас есть объект, в котором храняться зарплаты
 //нашей команды
@@ -497,8 +497,8 @@ for (const key of keys) {
 
 // console.log(sum());
 
-function changeEven(numbers, value) {
-  numbers.filter((number) => number % 2 === 0).forEach((el) => el * value);
-}
+// function changeEven(numbers, value) {
+//   numbers.filter((number) => number % 2 === 0).forEach((el) => el * value);
+// }
 
-console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
